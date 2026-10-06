@@ -1,10 +1,10 @@
 # Source of truth for the Homebrew cask. The release workflow renders this into
-# shayredmond/homebrew-tap with 0.2.1 and ede329f07e44f73f1875fb8de6c0e9b528101ec20c117185f5a84ce90729bc05 filled in, so the
+# shayredmond/homebrew-tap with 0.2.2 and 32e30786ba60b6f1ecc8e488a7b8dab62214f75cb3966dc9bd2dc1da2bdb97ea filled in, so the
 # cask is reviewed here alongside the code it installs rather than drifting in
 # a second repo.
 cask "meetloaf" do
-  version "0.2.1"
-  sha256 "ede329f07e44f73f1875fb8de6c0e9b528101ec20c117185f5a84ce90729bc05"
+  version "0.2.2"
+  sha256 "32e30786ba60b6f1ecc8e488a7b8dab62214f75cb3966dc9bd2dc1da2bdb97ea"
 
   # Pinned to the exact release, not /latest/: the checksum above is only valid
   # for one build, and a moving URL would fail verification on every new one.
