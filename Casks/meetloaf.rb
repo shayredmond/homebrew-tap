@@ -1,10 +1,10 @@
 # Source of truth for the Homebrew cask. The release workflow renders this into
-# shayredmond/homebrew-tap with 0.3.0 and b1a8f355b473e79f36905a627c8a704528f6cf6a51c356a15e03bc669e6d5cc8 filled in, so the
+# shayredmond/homebrew-tap with 0.4.0 and 7a0a47dbb2575060340aea573d09684911ec332be4509260653530f0260ea16b filled in, so the
 # cask is reviewed here alongside the code it installs rather than drifting in
 # a second repo.
 cask "meetloaf" do
-  version "0.3.0"
-  sha256 "b1a8f355b473e79f36905a627c8a704528f6cf6a51c356a15e03bc669e6d5cc8"
+  version "0.4.0"
+  sha256 "7a0a47dbb2575060340aea573d09684911ec332be4509260653530f0260ea16b"
 
   # Pinned to the exact release, not /latest/: the checksum above is only valid
   # for one build, and a moving URL would fail verification on every new one.
@@ -37,8 +37,9 @@ cask "meetloaf" do
   ]
 
   caveats <<~EOS
-    MeetLoaf is ad-hoc signed rather than notarized, so macOS quarantines it by
-    default. Install with --no-quarantine, or run:
+    MeetLoaf is ad-hoc signed rather than notarized, so macOS will refuse to
+    open it until the quarantine flag is cleared. After installing, and again
+    after each upgrade, run:
 
       xattr -dr com.apple.quarantine "#{appdir}/MeetLoaf.app"
   EOS
